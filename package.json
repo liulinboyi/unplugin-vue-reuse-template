@@ -1,6 +1,6 @@
 {
   "name": "unplugin-vue-reuse-template",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "packageManager": "pnpm@7.5.0",
   "description": "An simple template reuse in Vue3",
   "keywords": [
