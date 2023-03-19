@@ -7,7 +7,7 @@ import type { TransformResult } from 'unplugin'
 export const transform = async (code: string, id: string): Promise<TransformResult> => {
   const sfc = await parseSFC(code, id)
   if (!sfc) return
-  if (!sfc.scriptSetup) return
+  if (!sfc.template) return
 
   const { source } = sfc
 

@@ -35,6 +35,10 @@ const asAny = (foo: any) => foo as any;
   </div>
 </template>
 
+<!-- If you write like this, although it can be run in a development environment, it does not pass type checking when packaging  -->
+<!-- It is not recommended to write like this -->
+<!-- 如果你这样写，尽管开发环境可以运行，但是打包时无法通过类型检查 -->
+<!-- 不推荐这样写 -->
 <template $list>
   <div class="list">
     {{ n }}
