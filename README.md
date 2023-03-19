@@ -4,6 +4,9 @@ An simple template reuse in Vue3
 
 在Vue3中使用此款插件，可以简单复用模板。
 
+# Example
+https://github.com/liulinboyi/unplugin-vue-reuse-template-example
+
 ## Usage
 
 ### Basic example
