@@ -21,11 +21,11 @@ export const parseSFC = async (code: string, id: string) => {
   });
   const template = ast.descriptor.template;
   if (!template) {
-    return doNothing(code, id);
+    return
   }
   let templateProps = template.ast.props
   if (templateProps.filter(n => n.name.startsWith('$')).length) {
-    return doNothing(code, id);
+    return
   }
   let validErrors = []
   let regx = new RegExp(/<template[ ]+(\$[A-Za-z]+)>[\s\S]*?<\/template>/)
