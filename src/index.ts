@@ -32,7 +32,7 @@ export default createUnplugin<Options>((options = {}) => {
 
     transform(code, id) {
       try {
-        debugger
+        
         return transform(code, id)
       } catch (err: unknown) {
         this.error(`${name} ${err}`)

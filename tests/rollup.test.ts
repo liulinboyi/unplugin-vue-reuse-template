@@ -42,7 +42,7 @@ describe('transform', () => {
     for (const file of files.filter((n) => n.endsWith('.vue'))) {
       it(file.replace(/\\/g, '/'), async () => {
         const filepath = resolve(root, file)
-        debugger
+        
         const unpluginCode = await getCode(filepath, [
           VueReuse(),
           ToString,

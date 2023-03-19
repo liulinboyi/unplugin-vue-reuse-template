@@ -13,9 +13,9 @@ export function doNothing(code?, id?) {
 
 export const errors: (CompilerError | SyntaxError)[] = []
 export const parseSFC = async (code: string, id: string) => {
-  debugger
+  
   const s = new MagicString(code)
-  debugger;
+  
   const ast = parse(code, {
     filename: id
   });
@@ -52,7 +52,7 @@ export const parseSFC = async (code: string, id: string) => {
     nodeTransforms: [
       (node: any) => {
         if (node.tag === 'container' && node.props.length === 1) {
-          debugger
+          
           if (node.props[0].name === 'outlet') {
             const value = node.props[0].value.content
             let cur = validErrors.find(n => {
@@ -69,7 +69,7 @@ export const parseSFC = async (code: string, id: string) => {
   validErrors.forEach(n => {
     s.overwrite(n.loc.start.offset, n.loc.end.offset, '')
   })
-  debugger
+  
   let afterReplace = s.toString()
   const { descriptor } = parse(afterReplace ? afterReplace : code, {
     filename: id
