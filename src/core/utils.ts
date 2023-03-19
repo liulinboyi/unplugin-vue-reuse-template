@@ -16,8 +16,9 @@ export const parseSFC = async (code: string, id: string) => {
   
   const s = new MagicString(code)
   
+  const random =  new Date().valueOf() + Math.random()
   const ast = parse(code, {
-    filename: id
+    filename: `${random}-${id}`
   });
   const template = ast.descriptor.template;
   if (!template) {
